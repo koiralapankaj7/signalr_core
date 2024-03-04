@@ -1,6 +1,11 @@
 import 'dart:async';
 
 import 'package:signalr_core/signalr_core.dart';
+import 'package:signalr_core/src/connection.dart';
+import 'package:signalr_core/src/handshake_protocol.dart';
+import 'package:signalr_core/src/hub_protocol.dart';
+import 'package:signalr_core/src/logger.dart';
+import 'package:signalr_core/src/retry_policy.dart';
 import 'package:tuple/tuple.dart';
 
 typedef InvocationEventCallback = void Function(

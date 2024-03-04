@@ -9,7 +9,7 @@ class HubConnectionBuilder {
   RetryPolicy? reconnectPolicy;
 
   /// Configures the [HubConnection] to use HTTP-based transports to connect to the specified URL.
-
+  // ignore: avoid_returning_this
   HubConnectionBuilder withUrl(String url, [dynamic transportTypeOrOptions]) {
     _url = url;
 
@@ -20,7 +20,7 @@ class HubConnectionBuilder {
         _httpTransportType = transportTypeOrOptions;
       }
     }
-    // ignore: avoid_returning_this
+
     return this;
   }
 
@@ -28,7 +28,6 @@ class HubConnectionBuilder {
   // ignore: avoid_returning_this
   HubConnectionBuilder withHubProtocol(HubProtocol protocol) {
     _protocol = protocol;
-    // ignore: avoid_returning_this
     return this;
   }
 
@@ -50,7 +49,6 @@ class HubConnectionBuilder {
       reconnectPolicy = retryDelaysOrReconnectPolicy;
     }
 
-    // ignore: avoid_returning_this
     return this;
   }
 
